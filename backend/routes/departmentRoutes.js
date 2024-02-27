@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const { getDepartments } = require('../controllers/departmentController');
+// Import the controller function
+const { listDepartmentsWithEmployeeNames } = require('../controllers/departmentController');
 
-router.get('/', getDepartments);
+// Use the controller function in your route definition
+router.get('/', listDepartmentsWithEmployeeNames);
 
 module.exports = router;
