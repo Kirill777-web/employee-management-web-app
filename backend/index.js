@@ -9,7 +9,7 @@ const app = express();
 // Connect to Database
 connectDb();
 
-const port = process.env.NODE_LOCAL_PORT || 3020;
+const port = process.env.PORT || 3020;
 
 // Middleware to parse JSON
 app.use(express.json());
