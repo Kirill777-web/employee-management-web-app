@@ -50,7 +50,7 @@ const EmployeeTable = () => {
   }, []);
 
   return (
-    <div style={{ height: 400, width: '100%' }}>
+    <div style={{ height: 850, width: '100%' }}>
       <DataGrid
         rows={employees}
         columns={columns}
@@ -58,6 +58,14 @@ const EmployeeTable = () => {
         rowsPerPageOptions={[5]}
         checkboxSelection
         disableSelectionOnClick
+        sx={{
+          boxShadow: 2,
+          border: 2,
+          borderColor: 'primary.light',
+          '& .MuiDataGrid-cell:hover': {
+            color: 'primary.main',
+          },
+        }}
       />
     </div>
   );

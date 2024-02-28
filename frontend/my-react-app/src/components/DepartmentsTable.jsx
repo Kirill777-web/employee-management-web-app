@@ -23,12 +23,20 @@ const DepartmentsTable = () => {
   ];
 
   return (
-    <div style={{ height: 600, width: '100%' }}> 
+    <div style={{ height: 850, width: '100%' }}> 
       <DataGrid
         rows={departments}
         columns={columns}
         pageSize={5}
         getRowId={(row) => row.id}
+        sx={{
+          boxShadow: 2,
+          border: 2,
+          borderColor: 'primary.light',
+          '& .MuiDataGrid-cell:hover': {
+            color: 'primary.main',
+          },
+        }}
       />
     </div>
   );
