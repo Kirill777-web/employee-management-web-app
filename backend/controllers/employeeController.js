@@ -3,9 +3,14 @@ const Department = require('../models/Department');
 
 // Here we are defining the controller functions for the employee model.
 exports.listEmployees = async (req, res) => {
-  const employees = await Employee.find().populate('department');
-  res.json(employees);
-}
+  try {
+    const employees = await Employee.find().populate('department');
+    res.json(employees);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send({ message: "Failed to fetch employees." });
+  }
+};
 
 exports.createEmployee = async (req, res) => {
   try {

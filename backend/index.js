@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 const connectDb = require('./config/db');
 
+
 const app = express();
 
 // Connect to Database
@@ -13,6 +14,11 @@ const port = process.env.NODE_LOCAL_PORT || 3020;
 // Middleware to parse JSON
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+const cors = require('cors');
+app.use(cors({
+  origin: 'http://127.0.0.1:5173' // Adjust this to match the origin your React app is served from
+}));
 
 // Test route
 app.get('/', (req, res) => {

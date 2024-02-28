@@ -5,7 +5,7 @@ exports.listDepartmentsWithEmployeeNames = async (req, res) => {
   try {
     const departments = await Department.find().populate({
       path: 'employees',
-      select: 'name -_id' // This selects only the employee's name and excludes the employee's ObjectId from the result
+      select: 'name -_id' 
     });
     res.json(departments);
   } catch (error) {
