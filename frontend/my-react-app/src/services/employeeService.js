@@ -1,5 +1,6 @@
+
 export const fetchEmployees = async () => {
-  const response = await fetch('http://localhost:3020/api/employees');
+  const response = await fetch(`${process.env.REACT_APP_API_URL}/api/employees`);
   if (!response.ok) {
     throw new Error('Failed to fetch employees');
   }
