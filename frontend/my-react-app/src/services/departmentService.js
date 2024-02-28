@@ -1,4 +1,4 @@
-
+import process from 'process';
 export const fetchDepartments = async () => {
   const response = await fetch(`${process.env.REACT_APP_API_URL}/api/departments`);
   if (!response.ok) {
