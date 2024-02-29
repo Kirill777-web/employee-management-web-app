@@ -23,7 +23,7 @@ const DepartmentsTable = () => {
   ];
 
   return (
-    <div style={{ height: 850, width: '100%' }}> 
+    <div style={{ height: 850, width: '98%' }}> 
       <DataGrid
         rows={departments}
         columns={columns}

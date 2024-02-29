@@ -8,13 +8,13 @@ import { fetchEmployees } from '../services/employeeService'; // Adjust import p
 const columns = [
   { field: 'id', headerName: 'ID', width: 220, hide: true },
   { field: 'name', headerName: 'Name', width: 150 },
-  { field: 'email', headerName: 'Email', width: 220 },
+  { field: 'email', headerName: 'Email', width: 200 },
   { field: 'age', headerName: 'Age', type: 'number', width: 90 },
   { field: 'hobbies', headerName: 'Hobbies', width: 180 },
   {
   field: 'department', 
   headerName: 'Department', 
-  width: 200, 
+  width: 180, 
   flex: 1,
   sortable: false,
   valueGetter: (params) => params.row.department?.name || "No Department"
@@ -50,7 +50,7 @@ const EmployeeTable = () => {
   }, []);
 
   return (
-    <div style={{ height: 850, width: '100%' }}>
+    <div style={{ height: 850, width: '98%' }}>
       <DataGrid
         rows={employees}
         columns={columns}
