@@ -10,6 +10,12 @@ This project requires a MongoDB database for storing employee and department inf
 
 ## Screenshots
 
+## Screenshots
+![Employee Page](./public/assets/home-page.png)
+![Departments Page](./public/assets/menupage.png)
+![Login Page](./public/assets/reservation.png)
+![Settings Page](./public/assets/Login.png)
+
 ## Usage
 
 To use this project, follow these steps:
@@ -25,6 +31,11 @@ cd backend && npm start
 In a new terminal, start the frontend application:
 cd frontend && npm start
 ```
+
+# Features
+
+- Login page in building stage
+- Settings you can choose light or dark mode
 
 ## The application should now be running on http://localhost:3000.
 
