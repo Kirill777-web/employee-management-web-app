@@ -8,7 +8,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
-  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
+  parserOptions: { ecmaVersion: '2020', sourceType: 'module' },
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],
   rules: {
@@ -18,4 +18,7 @@ module.exports = {
     ],
     'react/prop-types': 'off',
   },
+  "globals":{
+    "process": "readonly"
+  }
 };

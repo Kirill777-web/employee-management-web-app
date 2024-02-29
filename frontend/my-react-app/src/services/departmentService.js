@@ -1,10 +1,9 @@
-
-/* eslint-env node */
+const apiUrl = import.meta.env.VITE_REACT_APP_API_URL;
 export const fetchDepartments = async () => {
-  console.log('API URL:', process.env.REACT_APP_API_URL);
-  const response = await fetch(`${process.env.REACT_APP_API_URL}/api/departments`);
+  const response = await fetch(`${apiUrl}/api/departments`);
   if (!response.ok) {
-    throw new Error('Failed to fetch departments');
+    throw new Error('Network response was not ok');
   }
-  return await response.json();
+  const data = await response.json();
+  return data;
 };

@@ -1,8 +1,7 @@
 
-/* eslint-env node */
+const apiUrl = import.meta.env.VITE_REACT_APP_API_URL;
 export const fetchEmployees = async () => {
-  console.log('API URL:', process.env.REACT_APP_API_URL);
-  const response = await fetch(`${process.env.REACT_APP_API_URL}/api/employees`);
+  const response = await fetch(`${apiUrl}/api/departments`);
   if (!response.ok) {
     throw new Error('Failed to fetch employees');
   }
