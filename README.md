@@ -13,7 +13,7 @@ This project requires a MongoDB database for storing employee and department inf
 
 ## Screenshots
 
-![Employee Page](./frontend/my-react-app/public/)
+![Employee Page](./frontend/my-react-app/public/employeespage.png)
 ![Departments Page](./frontend/my-react-app/public/departmentpage.png)
 ![Darkmode](./frontend/my-react-app/public/darkmode.png)
 ![Login Page](./frontend/my-react-app/public/loginpage.png)
