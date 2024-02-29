@@ -29,6 +29,8 @@ const DepartmentsTable = () => {
         columns={columns}
         pageSize={5}
         getRowId={(row) => row.id}
+        checkboxSelection
+        disableSelectionOnClick
         sx={{
           boxShadow: 2,
           border: 2,
@@ -37,6 +39,7 @@ const DepartmentsTable = () => {
             color: 'primary.main',
           },
         }}
+        
       />
     </div>
   );

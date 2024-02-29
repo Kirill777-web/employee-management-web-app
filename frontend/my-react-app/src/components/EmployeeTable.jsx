@@ -50,7 +50,7 @@ const EmployeeTable = () => {
   }, []);
 
   return (
-    <div style={{ height: 400, width: '100%' }}>
+    <div style={{ height: 8500, width: '98%' }}>
       <DataGrid
         rows={employees}
         columns={columns}
