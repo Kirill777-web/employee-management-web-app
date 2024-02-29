@@ -1,3 +1,4 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # Employee Management System
 
 ## Description
@@ -8,13 +9,13 @@ The Employee Management System is a web application designed to help organizatio
 
 This project requires a MongoDB database for storing employee and department information. Additionally, Node.js and Express are used for the backend, with React and Material-UI powering the frontend. A comprehensive list of requirements is detailed in a requirements document, available here: [Project Requirements](./frontend/my-react-app/public/Business%20briefing%20document.pdf).
 
-## Screenshots
 
 ## Screenshots
-![Employee Page](./public/assets/home-page.png)
-![Departments Page](./public/assets/menupage.png)
-![Login Page](./public/assets/reservation.png)
-![Settings Page](./public/assets/Login.png)
+![Employee Page](./public/)
+![Departments Page](./public/departmentpage.png)
+![Darkmode](./public/darkmode.png)
+![Login Page](./public/loginpage.png)
+![Settings Page](./public/settingpage.png)
 
 ## Usage
 
