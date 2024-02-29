@@ -15,6 +15,7 @@ const port = process.env.PORT || 3020;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// CORS
 const cors = require('cors');
 app.use(cors({
   origin: process.env.REACT_APP_API_URL
