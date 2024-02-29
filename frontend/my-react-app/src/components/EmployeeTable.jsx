@@ -4,7 +4,8 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { fetchEmployees } from '../services/employeeService'; 
-import nanoid from 'nanoid'; 
+import { nanoid } from 'nanoid';
+ 
 
 const columns = [
    { field: 'id', headerName: 'ID', width: 220, hide: true },
