@@ -7,10 +7,12 @@ The Employee Management System is a web application designed to help organizatio
 
 ## Requirements
 
-This project requires a MongoDB database for storing employee and department information. Additionally, Node.js and Express are used for the backend, with React and Material-UI powering the frontend. A comprehensive list of requirements is detailed in a requirements document, available here: ![Project Requirements](./frontend/my-react-app/public/Business%20briefing%20document.pdf).
+This project requires a MongoDB database for storing employee and department information. Additionally, Node.js and Express are used for the backend, with React and Material-UI powering the frontend. A comprehensive list of requirements is detailed in a requirements document, available here: 
+![Project Requirements](./frontend/my-react-app/public/Business%20briefing%20document.pdf).
 
 
 ## Screenshots
+
 ![Employee Page](./frontend/my-react-app/public/)
 ![Departments Page](./frontend/my-react-app/public/departmentpage.png)
 ![Darkmode](./frontend/my-react-app/public/darkmode.png)
