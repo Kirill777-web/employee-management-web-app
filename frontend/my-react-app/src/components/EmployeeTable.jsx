@@ -3,21 +3,17 @@ import { DataGrid } from '@mui/x-data-grid';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { fetchEmployees } from '../services/employeeService'; // Adjust import path as needed
+import { fetchEmployees } from '../services/employeeService'; 
+import nanoid from 'nanoid'; 
 
 const columns = [
-  { field: 'id', headerName: 'ID', width: 220, hide: true },
-  {
-    field: 'fullName', // New field for combined name
-    headerName: 'Name',
-    width: 150,
-    valueGetter: (params) => `${params.row.name.first} ${params.row.name.last}`, // Combine first and last names
-  },
+   { field: 'id', headerName: 'ID', width: 220, hide: true },
+  { field: 'fullName', headerName: 'Name', width: 150 },
   { field: 'email', headerName: 'Email', width: 200 },
   { field: 'age', headerName: 'Age', type: 'number', width: 90 },
   { field: 'hobbies', headerName: 'Hobbies', width: 180 },
   {
-    field: 'departmentName', // Use a separate field for department name
+    field: 'departmentName',
     headerName: 'Department',
     width: 180,
     flex: 1,
@@ -46,14 +42,17 @@ const EmployeeTable = () => {
 
   useEffect(() => {
     fetchEmployees().then((data) => {
-      // Extract first and last names for fullName field
       const employeesWithFullNames = data.map((emp) => ({
         ...emp,
-        fullName: `${emp.name.first} ${emp.name.last}`, // New property
+        id: emp._id || nanoid(), 
+        fullName: emp.name, 
+        departmentName: emp.department?.name || "No Department", 
       }));
       setEmployees(employeesWithFullNames);
-    }).catch(console.error);
-  }, []);
+    }).catch((error) => {
+      console.error(error);
+    });
+}, []);
 
   return (
     <div style={{ height: 850, width: '98%' }}>
